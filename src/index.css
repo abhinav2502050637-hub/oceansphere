@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #121212;
+    color: #f1f5f9;
+  }
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Glassmorphism & Bento Grid Styling */
+.glass-bento {
+  background: rgba(18, 18, 18, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-bento-card {
+  background: rgba(22, 26, 35, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.glass-bento-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-bento-card-hover:hover {
+  background: rgba(26, 32, 44, 0.85);
+  border-color: rgba(0, 240, 255, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 240, 255, 0.12), inset 0 1px 0 rgba(0, 240, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Metallic & Neon Accents */
+.text-metallic {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-neon-blue {
+  color: #00f0ff;
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.4);
+}
+
+.bg-neon-blue {
+  background-color: #00f0ff;
+}
+
+.border-neon-blue {
+  border-color: rgba(0, 240, 255, 0.4);
+}
+
+.glow-neon-blue {
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
+}
+
+.glow-silver {
+  box-shadow: 0 0 20px rgba(203, 213, 225, 0.15);
+}
+
+/* Futuristic Subtle Grid Pattern Background */
+.bg-tech-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.5);
+}
+
+/* Cesium Viewer Clean UI Overrides */
+.cesium-viewer-bottom {
+  display: none !important;
+}
+
+.cesium-viewer-toolbar {
+  top: 20px !important;
+  right: 20px !important;
+}
+
+.cesium-toolbar-button {
+  background: rgba(18, 18, 18, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.cesium-toolbar-button:hover {
+  background: rgba(26, 32, 44, 0.95) !important;
+  border-color: rgba(0, 240, 255, 0.4) !important;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2) !important;
+}
